@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Monedas</title>
+    <link rel="stylesheet" href="conversorm.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,
+        700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap"
+        rel="stylesheet" />
+
+    <script src="conversorm.js"></script>
+</head>
+<body>
+    <h1>Conversor de Monedas</h1>
+    <form enctype="multipart/form-data">
+        <div class="item">
+            <label for="moneda">Moneda: </label>
+            <input type="radio" name="moneda" id="monedad" value="D" 
+            onclick="selectedOption(document.getElementById('monedad').value)" />Dólar
+            <input type="radio" name="moneda" id="monedab" value="B" 
+            onclick="selectedOption(document.getElementById('monedab').value)" />Bitcoin
+          </div>
+        <label id="opcion"></label>
+        <div class="item">
+            <label for="cantidad">Cantidad: </label>
+            <input class="cantidad" type="number" name="cantidad" id="cantidad" min="0" step="1" 
+            inputmode="numeric" pattern="[0-9]*" onchange="enableButton()" disabled />
+         </div>
+         <button type="button" id="btnConversor" class="btn-factorial" 
+         onclick="convertirMoneda(document.getElementById('cantidad').value)" disabled>
+            Calcular
+        </button>
+        <div id="resultado"></div>
+    </form>
+</body>
+</html>

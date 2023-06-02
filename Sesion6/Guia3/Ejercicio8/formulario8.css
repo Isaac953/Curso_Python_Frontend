@@ -1,0 +1,63 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: "Source Sans Pro", sans-serif, Verdana;
+    width: 40%;
+    padding: 15px;
+  }
+  
+  h1 {
+    margin-bottom: 8px;
+    text-align: center;
+  }
+
+  
+.item {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
+    font-size: 14px;
+  }
+  
+  label {
+    font-weight: bold;
+  }
+  
+  input {
+    margin: 8px 0px;
+    border: 1px solid #ccc;
+    box-shadow: inset 0 1px 3px #ddd;
+    border-radius: 4px;
+    padding: 8px;
+  }
+
+  .radio {
+    display: flex;
+    flex-direction: row;
+    margin-top: 5px;
+    font-size: 14px;
+    width: 28%;
+    justify-content: space-between;
+  }
+
+  .radio input{
+    padding: 0px;
+    margin: 0px;
+    margin-right: 5px;
+  }
+
+  select{
+    margin: 8px 0px;
+    border: 1px solid #ccc;
+    box-shadow: inset 0 1px 3px #ddd;
+    border-radius: 4px;
+    padding: 8px;
+  }
+
+  .form{
+    margin-bottom: 8px;
+  }

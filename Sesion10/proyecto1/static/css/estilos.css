@@ -1,0 +1,182 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Source Sans Pro", sans-serif, Verdana;
+  /* border: 1px solid black; */
+  width: 50%;
+  height: 50vh;
+}
+
+h1 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.content{
+  margin-left: 10px;
+}
+
+h2 {
+  margin-bottom: 8px;
+}
+
+.items{
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 8px;
+}
+
+.response{
+  font-weight: bold;
+}
+
+/*Estilos para caculadora*/
+
+.item_f{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+label {
+  font-weight: bold;
+}
+
+input {
+  margin: 8px 0px;
+  border: 1px solid #ccc;
+  box-shadow: inset 0 1px 3px #ddd;
+  border-radius: 4px;
+  padding: 8px;
+  margin-left: 8px;
+  width: 20%;
+}
+
+select{
+  margin: 8px 0px;
+  border: 1px solid #ccc;
+  box-shadow: inset 0 1px 3px #ddd;
+  border-radius: 4px;
+  padding: 8px;
+  margin-left: 8px;
+  width: 20%;
+}
+
+.btn-factorial{
+  background: none;
+  border: none;
+  background-color: #008CBA;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn-factorial:hover{
+  background-color: #1e00a1;
+}
+
+.btn-factorial:disabled{
+  background-color: gray;
+}
+
+div{
+  font-size: 18px;
+  margin-top: 8px;
+}
+
+.label-r{
+  font-weight: normal;
+}
+
+/* Estilos para captura de datos */
+
+table, th, td {
+  border: 1px solid gray;
+  border-collapse: collapse;
+}
+
+th {
+  background-color: #146C94;
+  color: white;
+  font-weight: bold;
+  padding: 5px;
+  font-size: 16px;
+}
+
+td {
+  text-align: center;
+  font-size: 14px;
+  padding: 5px;
+}
+
+.color1 {
+  background-color: #03C988;
+}
+
+.color2 {
+  background-color: #97DEFF;
+}
+
+/* Estilos para tarea consumo de API */
+tbody tr:nth-child(even) {
+  background-color: #03C988;
+  }
+
+tbody tr:nth-child(odd) {
+  background-color:#97DEFF;
+  }
+
+/* Estilos dinamicos de lista de usuarios */
+
+.text-normal{
+  font-weight: normal;
+}
+
+.text-bold{
+  font-weight: bold;
+}
+
+/* Estilos para noticias */
+
+ol {
+  list-style-type: decimal-leading-zero;
+  margin-left: 30px;
+}
+
+li{
+  margin: 15px 0px;
+  text-align: justify;
+  line-height: 1.5;
+}
+
+a{
+  text-decoration: none;
+  color: #00337C;
+}
+
+a:hover{
+  color: #FC7300;
+}
+
+a:visited {
+  color: none;
+}
+
+.search {
+  width: 100%;
+}
+
+h3{
+  margin-top: 15px;
+}

@@ -1,0 +1,35 @@
+body {
+    width: 40%;
+}
+
+.dotted{
+    border: dotted;
+}
+
+.dashed{
+    border: dashed;
+}
+
+.solid{
+    border: solid;
+}
+
+.double{
+    border: double;
+}
+
+h1 {
+    border: groove;
+}
+
+h2 {
+    border: ridge;
+}
+
+h3 {
+    border: inset;
+}
+
+h4 {
+    border: outset;
+}

@@ -1,0 +1,28 @@
+{% extends 'layout/base.html' %}
+
+{% block titulo %}
+{{ titulo }}
+{% endblock titulo %}
+
+{% block contenido %}
+<h2>{{ titulo }}</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Usuario</th>
+      <th>Edad</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for user in user_list %}
+    <tr>
+      <td>{{user.nombre}}</td>
+      <td class="{{user.class}}">{{user.usuario}}</td>
+      <td>{{user.edad}}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock contenido %}

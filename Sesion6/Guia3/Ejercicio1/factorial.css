@@ -1,0 +1,58 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Source Sans Pro", sans-serif, Verdana;
+  border: 1px solid black;
+  width: 35%;
+  height: 210px;
+}
+
+h1 {
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+form {
+  padding-left: 15px;
+}
+
+label {
+  font-size: 18px;
+}
+
+input {
+  width: 15%;
+  font-size: 18px;
+}
+
+.btn-factorial {
+  background: none;
+  border: none;
+  background-color: #008cba;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn-factorial:hover {
+  background-color: #1e00a1;
+}
+
+.btn-factorial:disabled {
+  background-color: gray;
+}
+
+div {
+  font-size: 18px;
+  margin-top: 8px;
+}
+
+.respuesta {
+  font-weight: bold;
+}

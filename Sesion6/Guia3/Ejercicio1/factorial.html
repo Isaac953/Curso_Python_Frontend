@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Factorial de un entero</title>
+  <link rel="stylesheet" href="factorial.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,
+    wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,
+    700;1,900&display=swap"
+    rel="stylesheet" />
+
+  <script src="factorial.js"></script>
+</head>
+
+<body>
+  <h1>Factorial</h1>
+  <form enctype="multipart/form-data">
+    <label for="numero">Escriba un número: </label>
+    <input type="number" name="numero" id="numero" min="1" step="1" 
+    onKeyPress="return soloNumeros(event)" onKeyUp="pierdeFoco(this)" 
+    inputmode="numeric" pattern="[1-9]*" onchange="enableButton()" />
+    <button type="button" disabled id="btnFactorial" class="btn-factorial"
+      onclick="factorial(document.getElementById('numero').value)">
+      Calcular
+    </button>
+    <div id="resultado"></div>
+  </form>
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+{% extends 'layout/base.html' %}
+
+{% block titulo %}
+{{ titulo }}
+{% endblock titulo %}
+
+{% block contenido %}
+<h2>{{ titulo }}</h2>
+<!--Formulario-->
+<form action="noticias/resultados" method="POST" enctype="multipart/form-data">
+  {% csrf_token %}
+  <div class="item_f">
+    <!--Desactivar boton e Input al completar busqueda-->
+    {% if btn == 'disabled' %}
+    <input class="search" type="text" name="search" required id="search" placeholder="Buscar..." disabled/>
+    <input class="btn-factorial" type="submit" value="Buscar" disabled>
+    <!--Activados boton e Input si no se ha hecho la busqueda-->
+    {% else %}
+    <input class="search" type="text" name="search" required id="search" placeholder="Buscar..." />
+    <input class="btn-factorial" type="submit" value="Buscar">
+    {% endif %}
+  </div>
+
+  <!--Ocultar algunos elementos si no hay busqueda aun-->
+  {% if div == 'Con datos' %}
+  <div id="resultado">
+    <label class="label-r">La palabra clave ingresada es: <span class="response"> {{search}}</span></label>
+  </div>
+
+  <div class="item_f">
+    <h3>Noticias coincidentes</h3>
+  </div>
+  {% endif %}
+
+  <!--Mostrar lista completa por defecto-->
+  <ol>
+    {% for noticia in news %}
+    <li><a href="{{noticia.link}}">{{noticia.titulo}}</a></li>
+    {% endfor %}
+  </ol>
+
+  <!--Ocultar algunos elementos si no hay busqueda aun-->
+  {% if div == 'Con datos' %}
+  <div class="item_f">
+    <h3>Noticias no coincidentes</h3>
+  </div>
+
+  <!--Si hay busqueda entonces mostrar otra lista con resultados no coincidentes-->
+  <ol>
+    {% for noticia in news2 %}
+    <li><a href="{{noticia.link}}">{{noticia.titulo}}</a></li>
+    {% endfor %}
+  </ol>
+  {% endif %}
+</form>
+
+{% endblock contenido %}

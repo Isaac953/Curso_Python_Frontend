@@ -1,0 +1,17 @@
+body {
+    width: 48%;
+}
+
+.padshort{
+    border: 1px solid gray;
+    padding: 25px;
+}
+
+.padvalues{
+    border: 1px solid darkgreen;
+    padding: 20px 10px;
+}
+
+p{
+    padding: 50px;
+}

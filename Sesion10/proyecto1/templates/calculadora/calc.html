@@ -1,0 +1,40 @@
+{% extends 'layout/base.html' %}
+  {% block titulo %}
+    {{ titulo }}
+  {% endblock titulo %}
+  {% block contenido %}
+  <h2>{{ titulo }}</h2>
+  <form action="calculadora/math" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="item_f">
+      <label for="num1">Número 1: </label>
+      <input type="text" name="num1" id="num1" />
+    </div>
+    <div class="item_f">
+      <label for="num2">Número 2: </label>
+      <input type="text" name="num2" id="num2" />
+    </div>
+    <div class="item_f">
+      <label for="calc">Operación: </label>
+      <select name="calc" id="calc">
+        <option value="suma">Suma</option>
+        <option value="resta">Resta</option>
+        <option value="multiplicacion">Multiplicación</option>
+        <option value="division">División</option>
+      </select>
+    </div>
+    {% if btn == 'disabled' %}
+      <input class="btn-factorial" type="submit" value="Enviar Datos" disabled>
+    {% else %}
+      <input class="btn-factorial" type="submit" value="Enviar Datos">
+    {% endif %}
+    {% if div == 'Con datos' %}
+      <div id="resultado">
+        <label class="label-r">La {{operacion}} de los números {{numero1}} y {{numero2}} es: <span class="response"> {{resultado}}</span></label>
+      </div>
+    {% else %}
+      <div id="resultado">
+      </div>
+    {% endif %}
+  </form>
+  {% endblock contenido %}

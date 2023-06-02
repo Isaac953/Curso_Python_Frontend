@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario de Incidencia</title>
+  </head>
+
+  <body>
+    <form action="" method="post" enctype="multipart/form-data">
+      <fieldset style="width: 25%">
+        <legend>Datos de la incidencia:</legend>
+        <div>
+          <label for="usuario">Usuario: </label>
+          <br />
+          <input
+            type="text"
+            name="usuario"
+            id="usuario"
+          />
+        </div>
+        <div>
+          <label for="departamento">Departamento: </label>
+          <br />
+          <select name="departamento" id="departamento">
+            <option value="if">Informática</option>
+          </select>
+        </div>
+        <div>
+          <label for="descripcion">Descripción: </label>
+          <br />
+          <textarea
+            name="descripcion"
+            id="descripcion"
+            cols="30"
+            rows="5"
+            placeholder="Describa la incidencia..."
+          ></textarea>
+        </div>
+        <div>
+          <label for="contraseña">Contraseña: </label>
+          <br />
+          <input type="password" name="contraseña" id="contraseña" />
+        </div>
+      </fieldset>
+      <fieldset style="width: 25%">
+        <legend>Botones de reset y envio:</legend>
+        <div>
+          <input type="submit" value="Resetear" />
+          <input type="submit" value="Enviar" />
+        </div>
+      </fieldset>
+    </form>
+  </body>
+</html>

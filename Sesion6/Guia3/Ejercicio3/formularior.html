@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario Registro</title>
+
+    <link rel="stylesheet" href="formularior.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,
+      wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,
+      700;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="formularior.js"></script>
+  </head>
+  <body>
+    <h1>Formulario de Registro</h1>
+    <form id="formulario" method="post" enctype="multipart/form-data" onsubmit="event.preventDefault();">
+
+        <div class="item">
+          <label for="nombre">Nombre: </label>
+          <input type="text" name="nombre" id="nombre" />
+        </div>
+        <div class="item">
+          <label for="correo">Correo: </label>
+          <input type="text" name="correo" id="correo" />
+        </div>
+        <div class="item">
+          <label for="contrasenia">Contraseña: </label>
+          <input type="password" minlength="6" name="contrasenia" id="contrasenia" 
+          onkeypress="validarPassword(document.getElementById('contrasenia'))"
+          onkeydown="validarPassword(document.getElementById('contrasenia'))" />
+          <span id="msj-password"></span>
+        </div>
+        <div class="item">
+          <label for="comentarios">Comentarios: </label>
+          <textarea
+            name="comentarios"
+            id="comentarios"
+            cols="30"
+            rows="5"
+            maxlength="50"
+            onkeypress="limiteComentario(document.getElementById('comentarios'), 1)"
+            onkeydown="limiteComentario(document.getElementById('comentarios'), -1)"
+          ></textarea>
+          <span id="msj-comentario">
+            0 Caracteres escritos
+          </span>
+        </div>
+      <input id="btn-enviar" class="btn-factorial" type="submit" value="Enviar" onclick="validarFormulario()" disabled />
+
+      <span id="msj-formulario" class="submit-form"></span>
+    </form>
+  </body>
+</html>

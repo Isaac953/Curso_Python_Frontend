@@ -1,0 +1,21 @@
+body{
+    width: 50%;
+    /* border: 1px solid; */
+}
+
+figure {
+    margin: 0px;
+}
+
+img {
+    width: 170px;
+    border: 1px solid;
+}
+
+figcaption {
+    width: 100%;
+}
+
+pre {
+    font-family: 'Times New Roman', Times, serif;
+}

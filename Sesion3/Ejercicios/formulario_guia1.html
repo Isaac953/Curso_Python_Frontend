@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario Pizza Shop 2.0</title>
+</head>
+
+<body>
+    <table border="1">
+        <thead>
+            <tr>
+                <th colspan="2">Pizza Shop 2.0</th>
+            </tr>
+        </thead>
+        <tbody>
+            <form action="" method="post">
+                <tr>
+                    <th><label for="name">Name</label></th>
+                    <th><input type="text" name="name" id="name" placeholder="Name"/></th>
+                </tr>
+                <tr>
+                    <th><label for="topping">Pizza Topping</label></th>
+                    <th>
+                        <input type="radio" name="topping" id="toppings" value="S" />Supreme<br />
+                        <input type="radio" name="topping" id="toppingv" value="V" />Vegetarian<br />
+                        <input type="radio" name="topping" id="toppingh" value="H" />Hawaiian
+                    </th>
+                </tr>
+                <tr>
+                    <th><label for="sauce">Pizza Sauce</label></th>
+                    <th><select name="sauce" id="sauce">
+                            <option value="tm" selected>Tomato</option>
+                            <option value="bq">Barbeque</option>
+                            <option value="my">Mayonnaise</option>
+                            <option value="ss">Secret Sauce</option>
+                        </select></th>
+                </tr>
+                <tr>
+                    <th><label for="extras">Optional Extras</label></th>
+                    <th><input type="checkbox" name="extras" id="extras1" value="1" />Extra Cheese
+                        <input type="checkbox" name="extras" id="extras2" value="2" />Gluten Free Base
+                    </th>
+                </tr>
+                <tr>
+                    <th><label for="instructions">Delivery instructions</label></th>
+                    <th><textarea name="instructions" id="instructions" cols="30" rows="5" placeholder="instructions"></textarea>
+                    </th>
+                </tr>
+                <tr>
+                    <th colspan="2" align="left"><input type="submit" value="Send my order" /></th>
+                    </tr>
+            </form>
+        </tbody>
+    </table>
+</body>
+
+</html>

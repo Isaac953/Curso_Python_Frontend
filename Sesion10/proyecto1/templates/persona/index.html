@@ -1,0 +1,14 @@
+{% extends 'layout/base.html' %}
+
+{% block titulo %}
+{{ titulo }}
+{% endblock titulo %}
+
+{% block contenido %}
+<h2>{{ titulo }}</h2>
+
+<div class="items">
+    <label>Nombre: <span class="response"> {{ nombre }}</span></label>
+    <label>Edad: <span  class="response"> {{ edad }}</span></label>
+</div>
+{% endblock contenido %}

@@ -1,0 +1,15 @@
+body {
+    width: 50%;
+}
+
+p {
+    text-align: left;
+}
+
+h1 {
+    text-align: right;
+}
+
+h2 {
+    text-align: center;
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formularios</title>
+
+    <link rel="stylesheet" href="formulario8.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,
+      wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,
+      700;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="formulario8.js"></script>
+  </head>
+  <body>
+    <h1>Formularios</h1>
+    <form class="form">
+      <div class="item">
+        <label name="first_name_label">First name:</label>
+        <input type="text" name="Isaac" value="Isaac" />
+      </div>
+      <div class="item">
+        <label name="last_name_label">Last name:</label>
+        <input type="text" name="lastname" />
+      </div>
+      <div class="radio">
+        <input type="radio" name="sex" value="male" checked /> Male
+        <input type="radio" name="sex" value="female" /> Female
+      </div>
+      <div class="item">
+        <label>Favorite day of the week:</label>
+    </div>
+    <div class="item">
+      <select name="fav_day" id="days" onchange="mostrarDay()">
+        <option value="Friday">Friday</option>
+        <option value="Saturday">Saturday</option>
+        <option value="Monday">Monday</option>
+      </select>
+    </div>
+    </form>
+
+    <form class="form">
+      What's your major:
+      <br />
+      <input type="text" name="major" />
+      <br />
+      What's your job title:
+      <br />
+      <input type="text" name="job_title" />
+      <br />
+      Do you like challenges:
+      <br />
+      <input type="radio" name="challenge" value="yes" checked />Yes
+      <br />
+      <input type="radio" name="challenge" value="no" />No
+    </form>
+  </body>
+</html>

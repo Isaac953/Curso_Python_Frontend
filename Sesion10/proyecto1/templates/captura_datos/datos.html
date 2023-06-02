@@ -1,0 +1,58 @@
+{% extends 'layout/base.html' %}
+
+{% block titulo %}
+{{ titulo }}
+{% endblock titulo %}
+
+{% block contenido %}
+<h2>{{ titulo }}</h2>
+
+<form action="captura_datos/result" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="item_f">
+      <label for="dt1">Name </label>
+      <input type="text" name="dt1" id="dt1" />
+    </div>
+    <div class="item_f">
+        <label for="dt2">Physics </label>
+        <input type="text" name="dt2" id="dt2" />
+      </div>
+      <div class="item_f">
+        <label for="dt3">Chemistry </label>
+        <input type="text" name="dt3" id="dt3" />
+      </div>
+      <div class="item_f">
+        <label for="dt4">Maths </label>
+        <input type="text" name="dt4" id="dt4" />
+      </div>
+      {% if btn == 'disabled' %}
+        <input class="btn-factorial" type="submit" value="Submit" disabled>
+      {% else %}
+        <input class="btn-factorial" type="submit" value="Submit">
+      {% endif %}
+</form>
+
+{% if div == 'Con datos' %}
+<div id="resultado">
+    <table>
+        <thead>
+          <tr>
+            <th>Datos</th>
+            <th>Valores</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for dato in datos %}
+          <tr class="{{dato.class}}">
+              <td>{{dato.nombre}}</td>
+              <td>{{dato.valor}}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+</div>
+{% else %}
+<div id="resultado">
+</div>
+{% endif %}
+{% endblock contenido %}
